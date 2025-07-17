@@ -7,7 +7,13 @@ module "azurerm_resource_group" {
 
 module "azurerm_resource_group" {
   source                  = "../Modules/azurerm_resource_group"
+  resource_group_name     = "todo_app_rg_new"
+
+
+module "azurerm_resource_group" {
+  source                  = "../Modules/azurerm_resource_group"
   resource_group_name     = "todo_app_rg_second"
+
   resource_group_location = "West US"
 }
 
