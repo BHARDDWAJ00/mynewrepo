@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  terraform: 
+  terraform_checkout_and_azlogin: 
     runs-on: self-hosted
 
     steps:
@@ -20,5 +20,12 @@ jobs:
         uses: Azure/login@v2.3.0
         with: 
           creds: ${{secrets.INFRACODE}}
+
+  terraform_install:
+    runs-on: self-hosted
+
+    steps:
+      - name: terrafrom install
+        uses: 
       
         
