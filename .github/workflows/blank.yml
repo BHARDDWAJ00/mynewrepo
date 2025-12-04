@@ -38,9 +38,11 @@ jobs:
 
       - name : terraform init
         run  : terraform init
+        working-directory : ./Environment
     
       - name : terraform plan
         run  : terraform plan
+        working-directory : ./Environment
 
     
       
