@@ -28,6 +28,9 @@ jobs:
       - name: terraform install
         uses: hashicorp/setup-terraform@v2.0.3
 
+      - name: teraform version check
+        run: terraform -version
+
   terraform_init_and_plan:
     runs-on: self-hosted
     steps:
