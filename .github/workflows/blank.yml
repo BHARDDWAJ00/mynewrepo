@@ -32,7 +32,7 @@ jobs:
     runs-on: self-hosted
     steps:
       - name : terraform init
-        run  : terrafrom init
+        run  : terraform init
     
       - name : terraform plan
         run  : terraform plan
