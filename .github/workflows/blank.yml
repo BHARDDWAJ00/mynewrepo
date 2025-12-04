@@ -1,0 +1,24 @@
+name: terrafrom-deployment
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  terraform: 
+    runs-on: self-hosted
+
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v6.0.1
+
+      - name: Azure login
+        uses: Azure/login@v2.3.0
+        with: 
+          creds: ${{secrets.INFRACODE}}
+      
+        
