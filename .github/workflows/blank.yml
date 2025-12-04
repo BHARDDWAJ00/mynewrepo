@@ -31,6 +31,11 @@ jobs:
       - name: teraform version check
         run: terraform -version
 
+      - name: path set
+        run: |
+          echo "$HOME/.terraform-bin" >> $GITHUB_PATH
+          echo "$HOME/.local/bin" >> $GITHUB_PATH
+
   terraform_init_and_plan:
     runs-on: self-hosted
     steps:
@@ -39,6 +44,8 @@ jobs:
     
       - name : terraform plan
         run  : terraform plan
+
+    
       
         
         
