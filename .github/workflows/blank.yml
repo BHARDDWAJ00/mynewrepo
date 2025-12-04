@@ -25,7 +25,17 @@ jobs:
     runs-on: self-hosted
 
     steps:
-      - name: terrafrom install
-        uses: 
+      - name: terraform install
+        uses: hashicorp/setup-terraform@v2.0.3
+
+  terraform_init_and_plan:
+    runs-on: self-hosted
+    steps:
+      - name : terraform init
+        run  : terrafrom init
+    
+      - name : terraform plan
+        run  : terraform plan
       
+        
         
