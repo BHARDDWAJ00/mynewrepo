@@ -89,7 +89,7 @@ module "backend_vm" {
   source     = "../Modules/azurerm_virtual_machine"
 
   network_interface_name = "backend_nic"
-  location               = "West US"
+  location               = "East US"
   resource_group_name    = "todo_app_rg"
   ip_name                = "backend_ip"
   virtual_machine_name   = "todoBackendVM"
